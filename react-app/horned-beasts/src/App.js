@@ -1,8 +1,8 @@
 
+import React from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
-import React from "react";
 
 
 class App extends React.Component{
@@ -10,9 +10,9 @@ class App extends React.Component{
     return(
       <div>
 
-        <Header/>
-        <Main/>
-        <Footer/>
+        <Header />
+        <Main />
+        <Footer />
 
 
       </div>

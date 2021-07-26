@@ -6,10 +6,11 @@ class Header extends React.Component{
         return(
             <div>
                 <h1>
-
+                HornedBeasts
                 </h1>
             </div>
-        )
+        );
     }
 
 }
+export default Header;
