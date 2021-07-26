@@ -3,10 +3,14 @@ import React from "react";
 class Footer extends React.Component{
     render(){
         return(
-            <div>
-               &copy;Heba AL-Momani
-            </div>
-        )
+               <div style={{display: "block" }}>
+                   
+                   &copy;Heba AL-Momani
+
+               </div> 
+           
+          
+        );
     }
 }
 export default Footer;
