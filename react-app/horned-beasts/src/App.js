@@ -4,7 +4,7 @@ import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import SelectedBeast from "./components/SelectedBeast";
 import Horned from './components/data.json';
 class App extends React.Component {
 
@@ -12,8 +12,24 @@ class App extends React.Component {
     super(props);
     this.state = { 
     data: Horned ,
+
+    showingData: {}
     }
   }
+
+
+  showCard = (values) => {
+
+    this.setState({
+    selected:true,
+    showingData:values,
+  });
+  }
+
+  hideCard = () => {
+    this.setState({
+    selected: false});
+}
 
 
 
@@ -22,7 +38,8 @@ class App extends React.Component {
     return (
     <div>
     <Header/>
-    <Main hornedData={this.state.data}/>
+    <Main showCard={this.showCard} hornedData={this.state.data}/>
+    <SelectedBeast selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
     <Footer />
   </div>
     
@@ -32,4 +49,4 @@ class App extends React.Component {
 
 }
 
-export default App
+export default App;

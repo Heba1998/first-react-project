@@ -6,7 +6,7 @@ class Header extends React.Component{
         return(
             <div>
                 <h1>
-                HornedBeasts
+               Gallery of Horns
                 </h1>
             </div>
         );
