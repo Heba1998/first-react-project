@@ -6,6 +6,9 @@ import Footer from "./components/footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SelectedBeast from "./components/SelectedBeast";
 import Horned from './components/data.json';
+
+
+
 class App extends React.Component {
 
   constructor(props) {
@@ -31,6 +34,11 @@ class App extends React.Component {
     selected: false});
 }
 
+filteredData = (data) =>{
+  this.setState({data });
+}
+
+
 
 
 
@@ -38,7 +46,7 @@ class App extends React.Component {
     return (
     <div>
     <Header/>
-    <Main showCard={this.showCard} hornedData={this.state.data}/>
+    <Main showCard={this.showCard} hornedData={this.state.data} filteredData={this.filteredData}/>
     <SelectedBeast selected={this.state.selected} showingData={this.state.showingData} hideCard={this.hideCard} />
     <Footer />
   </div>
