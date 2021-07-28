@@ -38,13 +38,16 @@ updateCardState = () => {
 render() {
     return (
         <div>
-        <Card style={{ width: '18rem' , height: "500px" , padding: "10px" , float: "left", margin: "10px" }}>
-            <Card.Img onClick={this.updateCardState}  style={{height: "250px" }} variant="top" src={this.props.image_url} alt={this.props.title} />
+        <Card style={{ width: '18rem' , height: "600px" , padding: "10px" , float: "left", margin: "10px" }}>
+            <Card.Img onClick={this.updateCardState}  style={{height: "250px" ,  borderRadius: "8px" }} variant="top" src={this.props.image_url} alt={this.props.title} />
                 <Card.Body >
                 <div onClick={this.updateCardState} >
                     <Card.Title  >{this.props.title}</Card.Title>
                     <Card.Text  >
                         {this.props.description}
+                    </Card.Text>
+                    <Card.Text   >
+                    Horns Number :{this.props.horns} 
                     </Card.Text>
                     <Card.Text   >
                     votes: {this.state.numofvote} 
